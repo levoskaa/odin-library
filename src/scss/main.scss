@@ -1,6 +1,8 @@
 @use "_reset";
 @use "_variables" as vars;
+@use "_tables";
 @use "_header";
+@use "_main-page";
 
 *,
 *::before,
@@ -19,7 +21,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: vars.$heading-font-family;
   letter-spacing: 2px;
 }
 

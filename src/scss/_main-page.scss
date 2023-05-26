@@ -1,0 +1,44 @@
+@use "_variables" as vars;
+
+.page-content {
+  padding: 2rem;
+
+  @media only screen and (max-width: 600px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.table-wrapper {
+  max-width: 900px;
+}
+
+.books-table {
+  min-width: 600px;
+
+  th,
+  td {
+    &.page-count {
+      width: clamp(15ch, 10ch + 8vw, 20ch);
+    }
+
+    &.status {
+      width: clamp(9ch, 6ch + 8vw, 15ch);
+    }
+  }
+
+  .read,
+  .not-read {
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    border-radius: 8px;
+    color: vars.$text-light-primary;
+  }
+
+  .read {
+    background-color: vars.$positive;
+  }
+
+  .not-read {
+    background-color: vars.$negative;
+  }
+}

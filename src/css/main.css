@@ -52,9 +52,42 @@ table {
   border-spacing: 0;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #e7cbcb;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+.table th {
+  background-color: #e7cbcb;
+  font-weight: 600;
+}
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.table th.numeric,
+.table td.numeric {
+  text-align: right;
+}
+.table tr {
+  height: 3rem;
+}
+.table tr:hover {
+  background-color: rgba(231, 203, 203, 0.25);
+}
+
 .page-header {
   padding: 2rem 1rem;
-  background-color: #867070;
+  background-color: #643843;
   color: #ffffff;
 }
 .page-header__title {
@@ -67,6 +100,44 @@ table {
   font-weight: 500;
   text-align: center;
   font-size: 1.25rem;
+}
+
+.page-content {
+  padding: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .page-content {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.table-wrapper {
+  max-width: 900px;
+}
+
+.books-table {
+  min-width: 600px;
+}
+.books-table th.page-count,
+.books-table td.page-count {
+  width: clamp(15ch, 10ch + 8vw, 20ch);
+}
+.books-table th.status,
+.books-table td.status {
+  width: clamp(9ch, 6ch + 8vw, 15ch);
+}
+.books-table .read,
+.books-table .not-read {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 8px;
+  color: #ffffff;
+}
+.books-table .read {
+  background-color: #47a992;
+}
+.books-table .not-read {
+  background-color: #f55050;
 }
 
 *,
@@ -86,7 +157,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Libre Baskerville", serif;
   letter-spacing: 2px;
 }
 

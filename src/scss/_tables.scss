@@ -1,0 +1,40 @@
+@use "_variables" as vars;
+@use "sass:color";
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid vars.$palette-4;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  th {
+    background-color: vars.$palette-4;
+    font-weight: 600;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+
+    &.numeric {
+      text-align: right;
+    }
+  }
+
+  tr {
+    // Works as min-height for tables
+    height: 3rem;
+
+    &:hover {
+      background-color: color.change(vars.$palette-4, $alpha: 0.25);
+    }
+  }
+}
