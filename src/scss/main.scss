@@ -1,5 +1,6 @@
 @use "_reset";
 @use "_variables" as vars;
+@use "_header";
 
 *,
 *::before,
@@ -10,6 +11,16 @@
 html {
   box-sizing: border-box;
   font-family: vars.$font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: vars.$heading-font-family;
+  letter-spacing: 2px;
 }
 
 .sr-only:not(:focus):not(:active) {
