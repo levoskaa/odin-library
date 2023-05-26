@@ -7,12 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0..1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="img/bookshelf.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
 </head>
 
 <body>
+    <header></header>
+
+    <main>
+        <table class="books-table">
+            <caption class="sr-only">Books in my library</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Author</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Number of pages</th>
+                    <th scope="col">Already read</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
 </body>
 
 </html>
