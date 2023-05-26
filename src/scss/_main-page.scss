@@ -2,6 +2,8 @@
 
 .page-content {
   padding: 2rem;
+  display: grid;
+  justify-content: center;
 
   @media only screen and (max-width: 600px) {
     padding: 1rem 0.5rem;
@@ -9,7 +11,9 @@
 }
 
 .table-wrapper {
+  width: 100%;
   max-width: 900px;
+  margin-bottom: 0.5rem;
 }
 
 .books-table {
@@ -41,4 +45,9 @@
   .not-read {
     background-color: vars.$negative;
   }
+}
+
+.add-book-btn {
+  text-transform: uppercase;
+  justify-self: end;
 }

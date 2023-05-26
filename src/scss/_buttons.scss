@@ -1,0 +1,26 @@
+@use "sass:color";
+@use "_variables" as vars;
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  background-color: vars.$positive;
+  color: vars.$text-light-primary;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: color.scale(vars.$positive, $lightness: -20%);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid vars.$palette-1;
+    outline-offset: 1px;
+  }
+}
