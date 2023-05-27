@@ -39,7 +39,7 @@
     </main>
 
     <dialog class="modal new-book-modal">
-        <form action="" id="new-book-form" class="form modal__content">
+        <form action="" method="dialog" id="new-book-form" class="form modal__content">
             <div class="form-row">
                 <label for="author">Author</label>
                 <input type="text" id="author" name="author" required autofocus>
@@ -58,7 +58,7 @@
             </div>
         </form>
         <div class="modal__actions">
-            <button class="btn btn--text">Cancel</button>
+            <button type="button" class="btn btn--text" data-cancel-btn>Cancel</button>
             <button class="btn" form="new-book-form">Add book</button>
         </div>
     </dialog>

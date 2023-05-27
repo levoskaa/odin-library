@@ -1,6 +1,9 @@
 const booksTableBody = document.querySelector("[data-books-table-body");
 const addBookButton = document.querySelector(".add-book-btn");
 const newBookModal = document.querySelector(".new-book-modal");
+const newBookForm = newBookModal.querySelector("#new-book-form");
+const newBookModalCancelButton =
+  newBookModal.querySelector("[data-cancel-btn]");
 
 const books = [];
 const defaultBooks = [
@@ -48,6 +51,7 @@ function displayBooks(books) {
 }
 
 addBookButton.addEventListener("click", () => newBookModal.showModal());
+newBookModalCancelButton.addEventListener("click", () => newBookModal.close());
 newBookModal.addEventListener("click", (e) => {
   const modalRect = newBookModal.getBoundingClientRect();
   const clickedOutside =
@@ -58,6 +62,17 @@ newBookModal.addEventListener("click", (e) => {
   if (clickedOutside) {
     newBookModal.close();
   }
+});
+newBookModal.addEventListener("close", () => newBookForm.reset());
+
+newBookForm.addEventListener("submit", () => {
+  const author = newBookForm.querySelector("#author").value;
+  const title = newBookForm.querySelector("#title").value;
+  const pageCount = newBookForm.querySelector("#page-count").value;
+  const readAlready = newBookForm.querySelector("#read-already").checked;
+  const book = new Book(author, title, pageCount, readAlready);
+  storeBook(book);
+  displayBooks(books);
 });
 
 // Add default books to the collection
