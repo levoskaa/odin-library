@@ -69,8 +69,74 @@ table {
   transform: translateY(1px);
 }
 .btn:focus-visible {
-  outline: 2px solid #643843;
+  outline: 2px solid #c88ea7;
   outline-offset: 1px;
+}
+.btn--text {
+  background: none;
+  color: #333333;
+}
+.btn--text:hover {
+  background: none;
+}
+
+.modal {
+  color: inherit;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+.modal::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+.modal__content {
+  margin-bottom: 2rem;
+}
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+.form-row--binary-question {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.form label {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.form label.label--toggle {
+  margin-bottom: 0;
+}
+.form input {
+  outline: none;
+  font: inherit;
+  font-size: max(16px, 100%);
+  border: 1px solid #333333;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 100%;
+  min-width: 250px;
+}
+.form input:focus-visible {
+  outline: 2px solid #c88ea7;
+}
+.form input[type=checkbox], .form input[type=radio] {
+  width: auto;
+  min-width: unset;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 1rem;
+  height: 1rem;
 }
 
 .table-wrapper {
@@ -155,7 +221,7 @@ table {
 .books-table .not-read {
   display: inline-block;
   padding: 0.25em 0.75em;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #ffffff;
 }
 .books-table .read {
@@ -170,6 +236,10 @@ table {
   justify-self: end;
 }
 
+.new-book-modal {
+  min-width: 350px;
+}
+
 *,
 *::before,
 *::after {
@@ -179,6 +249,7 @@ table {
 html {
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
+  color: #333333;
 }
 
 h1,

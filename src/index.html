@@ -37,6 +37,31 @@
         </div>
         <button class="btn add-book-btn">New book</button>
     </main>
+
+    <dialog class="modal new-book-modal">
+        <form action="" id="new-book-form" class="form modal__content">
+            <div class="form-row">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" required autofocus>
+            </div>
+            <div class="form-row">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-row">
+                <label for="page-count">Number of pages</label>
+                <input type="number" id="page-count" name="page-count" required min="0">
+            </div>
+            <div class="form-row form-row--binary-question">
+                <label for="read-already" class="label--toggle">Already read?</label>
+                <input type="checkbox" id="read-already" name="read-already">
+            </div>
+        </form>
+        <div class="modal__actions">
+            <button class="btn btn--text">Cancel</button>
+            <button class="btn" form="new-book-form">Add book</button>
+        </div>
+    </dialog>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+@mixin box-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin align-center($justify-content: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: center;
+}
+
+@mixin box-size($size) {
+  width: $size;
+  height: $size;
+}

@@ -1,6 +1,8 @@
 @use "_reset";
 @use "_variables" as vars;
 @use "_buttons";
+@use "_dialogs";
+@use "_forms";
 @use "_tables";
 @use "_header";
 @use "_main-page";
@@ -14,6 +16,7 @@
 html {
   box-sizing: border-box;
   font-family: vars.$font-family;
+  color: vars.$text-dark-primary;
 }
 
 h1,

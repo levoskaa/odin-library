@@ -1,0 +1,47 @@
+@use "_variables" as vars;
+@use "_mixins";
+
+.form {
+  &-row {
+    margin-bottom: 1rem;
+
+    &--binary-question {
+      @include mixins.align-center(flex-start);
+      gap: 1.5rem;
+    }
+  }
+
+  label {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+
+    &.label--toggle {
+      margin-bottom: 0;
+    }
+  }
+
+  input {
+    outline: none;
+    font: inherit;
+    font-size: max(16px, 100%);
+    border: 1px solid vars.$text-dark-primary;
+    border-radius: 4px;
+    padding: 0.5rem;
+    width: 100%;
+    min-width: 250px;
+
+    &:focus-visible {
+      outline: 2px solid vars.$palette-3;
+    }
+
+    &[type="checkbox"],
+    &[type="radio"] {
+      width: auto;
+      min-width: unset;
+      cursor: pointer;
+      @include mixins.box-reset;
+      @include mixins.box-size(1rem);
+    }
+  }
+}

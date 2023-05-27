@@ -34,7 +34,7 @@
   .not-read {
     display: inline-block;
     padding: 0.25em 0.75em;
-    border-radius: 8px;
+    border-radius: 4px;
     color: vars.$text-light-primary;
   }
 
@@ -50,4 +50,8 @@
 .add-book-btn {
   text-transform: uppercase;
   justify-self: end;
+}
+
+.new-book-modal {
+  min-width: 350px;
 }

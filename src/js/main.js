@@ -1,4 +1,6 @@
 const booksTableBody = document.querySelector("[data-books-table-body");
+const addBookButton = document.querySelector(".add-book-btn");
+const newBookModal = document.querySelector(".new-book-modal");
 
 const books = [];
 const defaultBooks = [
@@ -44,6 +46,19 @@ function displayBooks(books) {
   const booksHtml = books.map(bookToHtml).join("");
   booksTableBody.innerHTML = booksHtml;
 }
+
+addBookButton.addEventListener("click", () => newBookModal.showModal());
+newBookModal.addEventListener("click", (e) => {
+  const modalRect = newBookModal.getBoundingClientRect();
+  const clickedOutside =
+    e.clientX < modalRect.left ||
+    e.clientX > modalRect.right ||
+    e.clientY < modalRect.top ||
+    e.clientY > modalRect.bottom;
+  if (clickedOutside) {
+    newBookModal.close();
+  }
+});
 
 // Add default books to the collection
 for (const book of defaultBooks) {
