@@ -1,4 +1,5 @@
 @use "_variables" as vars;
+@use "_mixins";
 
 .page-content {
   padding: 2rem;
@@ -44,6 +45,11 @@
 
   .not-read {
     background-color: vars.$negative;
+  }
+
+  .operations {
+    @include mixins.align-center;
+    gap: 0.25rem;
   }
 }
 

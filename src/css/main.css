@@ -52,18 +52,22 @@ table {
   border-spacing: 0;
 }
 
-.btn {
+button {
+  font: inherit;
   border: none;
+  cursor: pointer;
+}
+
+.btn {
   border-radius: 4px;
   padding: 0.5rem 1.5rem;
-  background-color: #47a992;
+  background-color: #99627a;
   color: #ffffff;
   font-weight: 600;
-  cursor: pointer;
   transition: background-color 250ms ease-in-out;
 }
 .btn:hover {
-  background-color: #398775;
+  background-color: #7a4e62;
 }
 .btn:active {
   transform: translateY(1px);
@@ -78,6 +82,31 @@ table {
 }
 .btn--text:hover {
   background: none;
+}
+.btn--add {
+  background-color: #47a992;
+}
+.btn--add:hover {
+  background-color: #398775;
+}
+
+.icon-btn {
+  margin: 0;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: none;
+  transition: color 250ms ease-in-out;
+}
+.icon-btn .icon {
+  width: 100%;
+  height: auto;
+}
+.icon-btn--remove {
+  color: #f55050;
+}
+.icon-btn--remove:hover {
+  color: #f11313;
 }
 
 @keyframes dialog-fadeIn-grow {
@@ -183,6 +212,9 @@ table {
 .table td.numeric {
   text-align: right;
 }
+.table td.fit-width {
+  white-space: nowrap;
+}
 .table tr {
   height: 3rem;
 }
@@ -247,6 +279,12 @@ table {
 }
 .books-table .not-read {
   background-color: #f55050;
+}
+.books-table .operations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .add-book-btn {

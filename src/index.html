@@ -9,6 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link rel="shortcut icon" href="img/bookshelf.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
@@ -30,12 +31,13 @@
                         <th scope="col">Title</th>
                         <th scope="col" class="numeric page-count">Number of pages</th>
                         <th scope="col" class="status">Already read</th>
+                        <th scope="col"><span class="sr-only">Operations</span></th>
                     </tr>
                 </thead>
                 <tbody data-books-table-body></tbody>
             </table>
         </div>
-        <button class="btn add-book-btn">New book</button>
+        <button class="btn btn--add add-book-btn">New book</button>
     </main>
 
     <dialog class="modal new-book-modal">

@@ -42,12 +42,28 @@ function bookToHtml(book) {
           ? '<span class="read">Yes</span>'
           : '<span class="not-read">No</span>'
       }</td>
+      <td class="operations fit-width">        
+        <button type="button" class="icon-btn icon-btn--remove">
+          <span class="iconify icon" data-icon="mdi:bin"></span>
+        </button>
+      </td>
     </tr>`;
 }
 
 function displayBooks(books) {
   const booksHtml = books.map(bookToHtml).join("");
   booksTableBody.innerHTML = booksHtml;
+  addBookEventListeners();
+}
+
+function addBookEventListeners() {
+  const removeButtons = booksTableBody.querySelectorAll(".icon-btn--remove");
+  removeButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      removeBook(index);
+      displayBooks(books);
+    });
+  });
 }
 
 addBookButton.addEventListener("click", () => newBookModal.showModal());

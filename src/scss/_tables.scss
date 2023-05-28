@@ -29,6 +29,12 @@
     }
   }
 
+  td {
+    &.fit-width {
+      white-space: nowrap;
+    }
+  }
+
   tr {
     // Works as min-height for tables
     height: 3rem;
