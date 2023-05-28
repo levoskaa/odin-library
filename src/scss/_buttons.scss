@@ -17,7 +17,7 @@ button {
   transition: background-color 250ms ease-in-out;
 
   &:hover {
-    background-color: color.scale(vars.$palette-2, $lightness: -20%);
+    background-color: color.scale(vars.$palette-2, $lightness: -25%);
   }
 
   &:active {
@@ -42,7 +42,7 @@ button {
     background-color: vars.$positive;
 
     &:hover {
-      background-color: color.scale(vars.$positive, $lightness: -20%);
+      background-color: color.scale(vars.$positive, $lightness: -25%);
     }
   }
 }
@@ -51,7 +51,12 @@ button {
   @include mixins.box-reset;
   @include mixins.box-size(1.5rem);
   background: none;
+  color: vars.$palette-2;
   transition: color 250ms ease-in-out;
+
+  &:hover {
+    color: color.scale(vars.$palette-2, $lightness: -25%);
+  }
 
   .icon {
     width: 100%;
@@ -62,7 +67,7 @@ button {
     color: vars.$negative;
 
     &:hover {
-      color: color.scale(vars.$negative, $lightness: -20%);
+      color: color.scale(vars.$negative, $lightness: -25%);
     }
   }
 }

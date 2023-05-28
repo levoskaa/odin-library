@@ -42,7 +42,12 @@ function bookToHtml(book) {
           ? '<span class="read">Yes</span>'
           : '<span class="not-read">No</span>'
       }</td>
-      <td class="operations fit-width">        
+      <td class="operations fit-width">
+        <button type="button" class="icon-btn toggle-status">
+          <span class="iconify icon" data-icon="${
+            book.hasBeenRead ? "mdi:book-remove" : "mdi:book-check"
+          }"></span>
+        </button>     
         <button type="button" class="icon-btn icon-btn--remove">
           <span class="iconify icon" data-icon="mdi:bin"></span>
         </button>
@@ -61,6 +66,13 @@ function addBookEventListeners() {
   removeButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
       removeBook(index);
+      displayBooks(books);
+    });
+  });
+  const toggleButtons = booksTableBody.querySelectorAll(".toggle-status");
+  toggleButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      books[index].toggleRead();
       displayBooks(books);
     });
   });

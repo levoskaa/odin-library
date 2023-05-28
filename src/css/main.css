@@ -67,7 +67,7 @@ button {
   transition: background-color 250ms ease-in-out;
 }
 .btn:hover {
-  background-color: #7a4e62;
+  background-color: #734a5c;
 }
 .btn:active {
   transform: translateY(1px);
@@ -87,7 +87,7 @@ button {
   background-color: #47a992;
 }
 .btn--add:hover {
-  background-color: #398775;
+  background-color: #357f6e;
 }
 
 .icon-btn {
@@ -96,7 +96,11 @@ button {
   width: 1.5rem;
   height: 1.5rem;
   background: none;
+  color: #99627a;
   transition: color 250ms ease-in-out;
+}
+.icon-btn:hover {
+  color: #734a5c;
 }
 .icon-btn .icon {
   width: 100%;
@@ -106,7 +110,7 @@ button {
   color: #f55050;
 }
 .icon-btn--remove:hover {
-  color: #f11313;
+  color: #e70d0d;
 }
 
 @keyframes dialog-fadeIn-grow {
