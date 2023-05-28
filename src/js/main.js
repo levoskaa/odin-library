@@ -53,6 +53,10 @@ function displayBooks(books) {
 addBookButton.addEventListener("click", () => newBookModal.showModal());
 newBookModalCancelButton.addEventListener("click", () => newBookModal.close());
 newBookModal.addEventListener("click", (e) => {
+  if (e.detail === 0) {
+    // If the click was triggered by keyboard
+    return;
+  }
   const modalRect = newBookModal.getBoundingClientRect();
   const clickedOutside =
     e.clientX < modalRect.left ||
