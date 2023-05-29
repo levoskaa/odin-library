@@ -3,7 +3,6 @@
 
 .table-wrapper {
   overflow-x: auto;
-  margin: 0 auto;
 }
 
 .table {
@@ -11,11 +10,16 @@
   border-spacing: 0;
   border: 2px solid vars.$palette-4;
   border-radius: 8px;
-  margin: 0 auto;
 
   th {
     background-color: vars.$palette-4;
     font-weight: 700;
+  }
+
+  td {
+    &.fit-width {
+      white-space: nowrap;
+    }
   }
 
   th,
@@ -26,12 +30,6 @@
 
     &.numeric {
       text-align: right;
-    }
-  }
-
-  td {
-    &.fit-width {
-      white-space: nowrap;
     }
   }
 

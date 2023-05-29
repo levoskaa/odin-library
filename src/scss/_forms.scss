@@ -37,11 +37,11 @@
 
     &[type="checkbox"],
     &[type="radio"] {
+      @include mixins.box-reset;
+      @include mixins.box-size(1rem);
       width: auto;
       min-width: unset;
       cursor: pointer;
-      @include mixins.box-reset;
-      @include mixins.box-size(1rem);
     }
   }
 }

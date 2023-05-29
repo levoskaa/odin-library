@@ -181,18 +181,17 @@ button {
   outline: 2px solid #c88ea7;
 }
 .form input[type=checkbox], .form input[type=radio] {
-  width: auto;
-  min-width: unset;
-  cursor: pointer;
   margin: 0;
   padding: 0;
   width: 1rem;
   height: 1rem;
+  width: auto;
+  min-width: unset;
+  cursor: pointer;
 }
 
 .table-wrapper {
   overflow-x: auto;
-  margin: 0 auto;
 }
 
 .table {
@@ -200,11 +199,13 @@ button {
   border-spacing: 0;
   border: 2px solid #e7cbcb;
   border-radius: 8px;
-  margin: 0 auto;
 }
 .table th {
   background-color: #e7cbcb;
   font-weight: 700;
+}
+.table td.fit-width {
+  white-space: nowrap;
 }
 .table th,
 .table td {
@@ -215,9 +216,6 @@ button {
 .table th.numeric,
 .table td.numeric {
   text-align: right;
-}
-.table td.fit-width {
-  white-space: nowrap;
 }
 .table tr {
   height: 3rem;
